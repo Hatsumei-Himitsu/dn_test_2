@@ -1,0 +1,33 @@
+.spinner {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.spinner-img {
+  height: 100px;
+  width: 100px;
+  pointer-events: none;
+}
+
+.spinner-text {
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spinner-img {
+    animation: spinner-img-spin infinite 2s linear;
+  }
+}
+
+@keyframes spinner-img-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
